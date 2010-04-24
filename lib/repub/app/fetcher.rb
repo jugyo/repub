@@ -52,7 +52,7 @@ module Repub
           url = @options[:url]
           raise FetcherException, "empty URL" if !url || url.empty?
           begin
-            URI.parse(url)
+            /^https?:\/\/[-_.!~*'()a-zA-Z0-9;?:\@&=+\$,%#]+\/?/ =~ url
           rescue
             raise FetcherException, "invalid URL: #{url}"
           end
