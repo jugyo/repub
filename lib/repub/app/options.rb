@@ -28,11 +28,6 @@ module Repub
           :verbosity      => Repub::App::Logger::LOGGER_NORMAL,
         }
         
-        # Load default profile
-        if load_profile(options[:profile]).empty?
-          write_profile(options[:profile])
-        end
-        
         # Parse command line
         parser = OptionParser.new do |opts|
           opts.banner = <<-BANNER.gsub(/^          /,'')
