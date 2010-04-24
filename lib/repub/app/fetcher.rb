@@ -30,7 +30,7 @@ module Repub
         include Logger
         
         Downloaders = {
-          :wget     => { :cmd => 'wget', :options => '-nv -E -H -k -p -nH -nd' },
+          :wget     => { :cmd => 'wget', :options => '--no-verbose --html-extension --span-hosts --convert-links --page-requisites --no-host-directories --no-directories --max-redirect=0' },
           :httrack  => { :cmd => 'httrack', :options => '-gBqQ -r2 +*.css +*.jpg -*.xml -*.html' }
         }
         
