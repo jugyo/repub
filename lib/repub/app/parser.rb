@@ -15,7 +15,7 @@ module Repub
       # Default selectors, some reasonable values
       #
       Selectors = {
-        :title        => '//h1',
+        :title        => 'title',
         :toc          => '//ul',
         :toc_item     => './li',
         :toc_section  => './ul'
